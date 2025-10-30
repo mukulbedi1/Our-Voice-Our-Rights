@@ -1,0 +1,62 @@
+# =========================
+# General
+# =========================
+node_modules/
+.env
+.env.*
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.cache/
+coverage/
+tmp/
+*.pid
+*.seed
+*.bak
+*.swp
+
+# =========================
+# Frontend (React)
+# =========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+
+# =========================
+# Backend (Express / Node)
+# =========================
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/.env
+backend/.env.local
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/.pytest_cache/
+backend/instance/
+backend/migrations/
+backend/.venv/
+backend/venv/
+backend/.coverage
+backend/coverage/
+backend/.cache/
+backend/.vscode/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+

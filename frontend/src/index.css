@@ -1,0 +1,20 @@
+/* Import the Inter font from Google Fonts */
+/* This ensures the font is available for Tailwind's font-sans utility */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Apply base styles to the body */
+body {
+  font-family: 'Inter', sans-serif; /* Use Inter as the default font */
+  background-color: #f8fafc; /* Tailwind class 'bg-slate-50' - provides a light grey background */
+  margin: 0; /* Remove default browser margin */
+  padding: 0; /* Remove default browser padding */
+  box-sizing: border-box; /* Ensure padding/border are included in element's total width/height */
+  -webkit-font-smoothing: antialiased; /* Improve font rendering on macOS/iOS */
+  -moz-osx-font-smoothing: grayscale; /* Improve font rendering on Firefox */
+}
+
+/* Apply box-sizing reset to all elements for consistent layout */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+

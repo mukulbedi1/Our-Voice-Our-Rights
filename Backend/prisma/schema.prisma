@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// This model represents the structure of your mgnrega_performance table
+model mgnrega_performance {
+  id                           Int      @id @default(autoincrement())
+  data_for_date                DateTime @db.Date
+  state_name                   String?
+  district_name                String
+  job_cards_issued             Int?
+  total_active_workers         Int?
+  total_active_cards           Int?
+  total_workers                Int?
+  sc_active_workers            Int?
+  st_active_workers            Int?
+  approved_labour_budget       Decimal?
+  persondays_liability         Decimal?
+  sc_persondays                Decimal?
+  st_persondays                Decimal?
+  women_persondays             Decimal?
+  avg_days_employment_per_hh   Decimal?
+  avg_wage_rate                Decimal?
+  hh_completed_100_days        Int?
+  total_households_worked      Int?
+  total_individuals_worked     Int?
+  differently_abled_worked     Int?
+  gps_with_nil_exp             Int?
+  total_works_takenup          Int?
+  ongoing_works                Int?
+  completed_works              Int?
+  pct_nrm_expenditure          Decimal?
+  pct_category_b_works         Decimal?
+  pct_agri_expenditure         Decimal?
+  total_exp_lakhs              Decimal?
+  wages_lakhs                  Decimal?
+  material_skilled_wages_lakhs Decimal?
+  admin_exp_lakhs              Decimal?
+
+  // This unique constraint is critical for our scraper's 'upsert' logic
+  @@unique([district_name, data_for_date])
+}
